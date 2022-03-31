@@ -1,0 +1,123 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.circle-container {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  transform: rotate(-0deg);
+}
+
+.firstcard{
+  animation: circle-one 2s infinite;
+}
+
+.secondcard{
+  animation: circle-two 2s infinite;
+}
+
+.thridcard{
+  animation: circle-three 2s infinite;
+}
+
+.fourthcard{
+  animation: circle-four 2s infinite;
+}
+
+.button-container{
+  margin-top: 50px;
+}
+
+.circle {
+  display: block;
+  position: absolute;
+  width: 18px;;
+  height:18px;;
+  border-radius: 18px;
+  
+}
+
+.circle-one {
+  top: 0; left: -17px;
+  background-color:orangered;
+  transform: translateX(18px);
+}
+
+.circle-two {
+  top: -17px; right: 0;
+  background-color:yellow;
+  transform: translateY(18px);
+  z-index: 2;
+}
+
+.circle-three {
+  bottom: 0; right: -17px;
+  background-color:blue;
+  transform: translateX(-18px);
+  z-index: 1;
+}
+
+.circle-four {
+  bottom: -17px; left: 0;
+  background-color: green;
+  transform: translateY(-18px);
+}
+
+@keyframes circle-one{
+  0% {
+    top: 0;
+    bottom: auto;
+    width: 18px;;
+  }
+  33% {
+    top: 0;
+    bottom: auto;
+    width:96px;
+  }
+}
+
+@keyframes circle-two {
+  0% {
+    right: 0;
+    left: auto;
+    height: 18px;;
+  }
+  33% {
+    right: 0;
+    left: auto;
+    height:96px;
+  }
+}
+
+@keyframes circle-three {
+  0% {
+    bottom: 0;
+    top: auto;
+    width: 18px;;
+  }
+  33% {
+    bottom: 0;
+    top: auto;
+    width: 96px;
+  }
+}
+
+@keyframes circle-four {
+  0% {
+    left: 0;
+    right: auto;
+    height: 18px;;
+  }
+  33% {
+    left: 0;
+    right: auto;
+    height: 96px;
+  }
+}
